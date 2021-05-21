@@ -23,7 +23,7 @@ export default class Sell extends React.Component
     sellItem = () => 
     {
         var saleID = this.createUniqueID;
-
+        console.log(saleID);
         db.collection("Users").where("Email", "==", this.state.userID).get()
         .then((Snapshot)=>{
             Snapshot.forEach((doc)=>{
